@@ -6,21 +6,29 @@ import { setupLayouts } from "virtual:generated-layouts";
 import routes from "~pages";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [...setupLayouts(routes)],
+  history: createWebHistory("chains"),
+  routes: [
+    {
+      path: "/",
+      redirect: "/highbury" // Redirect the default page to '/evmos'
+    },
+    ...setupLayouts(routes)
+  ],
 });
 
-//update current blockchain
-router.beforeEach((to) => {
-    const { chain } = to.params
-    if(chain){
-      const blockchain = useBlockchain()
-      if(chain !== blockchain.chainName) {
-        blockchain.setCurrent(chain.toString())
-      }
-    } 
-})
-
-// Docs: https://router.vuejs.org/guide/advanced/navigation-guards.html#global-before-guards
+// Update current blockchain
+router.beforeEach((to, from, next) => {
+  const { chain } = to.params;
+  if (chain && chain !== "highbury") {
+    // If the requested chain is not 'fanfury', redirect to the 'fanfury' page
+    next("/highbury");
+  } else {
+    const blockchain = useBlockchain();
+    if (chain && chain !== blockchain.chainName) {
+      blockchain.setCurrent(chain.toString());
+    }
+    next();
+  }
+});
 
 export default router;
