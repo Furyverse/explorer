@@ -8,7 +8,7 @@
 
 </div>
 
-`Furya Explorer` is a light explorer for Furyverse.  https://explorer.fury.black .
+`Furya Explorer` is a light explorer for Furyverse.  https://explorer.furya.wtf
 
 ## What sets Furya Explorer apart from other explorers?
 **Furya Explorer** stands out by providing a real-time exploration of blockchain data without relying on caching or pre-processing. It exclusively fetches data from the Blackfury full node via LCD/RPC endpoints, ensuring a truly authentic experience. This approach is referred to as the "Light Explorer."
