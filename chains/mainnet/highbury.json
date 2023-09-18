@@ -1,5 +1,5 @@
 {
-  "chain_name": "highbury",
+  "chain_name": "Highbury",
   "chainId": "highbury_710-1",
   "api": ["https://api-mainnet.furya.io/", "https://api.furya.io/"],
   "rpc": ["https://gridiron.furya.io/", "https://rpc.furya.io/"],

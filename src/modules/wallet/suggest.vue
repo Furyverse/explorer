@@ -67,7 +67,7 @@ async function initParamsForKeplr() {
         },
         currencies: [
             {
-                coinDenom: chain.assets[0].symbol,
+                coinDenom: "FURY",
                 coinMinimalDenom: chain.assets[0].base,
                 coinDecimals,
                 coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
@@ -75,7 +75,7 @@ async function initParamsForKeplr() {
         ],
         feeCurrencies: [
             {
-                coinDenom: chain.assets[0].symbol,
+                coinDenom: "FURY",
                 coinMinimalDenom: chain.assets[0].base,
                 coinDecimals,
                 coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
@@ -84,7 +84,7 @@ async function initParamsForKeplr() {
         ],
         gasPriceStep,
         stakeCurrency: {
-            coinDenom: chain.assets[0].symbol,
+            coinDenom: "FURY",
             coinMinimalDenom: chain.assets[0].base,
             coinDecimals,
             coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
