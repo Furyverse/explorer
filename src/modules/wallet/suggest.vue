@@ -48,12 +48,12 @@ async function initParamsForKeplr() {
     }
     const coinDecimals = chain.assets[0].denom_units.find(x => x.denom === chain.assets[0].symbol.toLowerCase())?.exponent || 6
     conf.value = JSON.stringify({
-        chainId: chainid,
-        chainName: chain.chainName,
-        rpc: chain.endpoints?.rpc?.at(0)?.address,
-        rest: chain.endpoints?.rest?.at(0)?.address,
+        chainId: "highbury_710-1",
+        chainName: "Highbury",
+        rpc: "https://gridiron.furya.io",
+        rest: "https://api-mainnet.furya.io",
         bip44: {
-            coinType: Number(chain.coinType),
+            coinType: Number(459),
             alternativeBIP44s: Number(118),
         },
         // coinType: Number(chain.coinType),
@@ -104,12 +104,12 @@ async function initSnap() {
 
     conf.value = JSON.stringify({
         chainId,
-        chainName: chain.chainName,
+        chainName: "Highbury",
         bech32Config: {
             bech32PrefixAccAddr: chain.bech32Prefix,
         },
         bip44: {
-            coinType: Number(chain.coinType),
+            coinType: Number(459),
             alternativeBIP44s: Number(118),
         },
         feeCurrencies: [
@@ -121,7 +121,7 @@ async function initSnap() {
             gasPriceStep: {
                 low: 0.0625,
                 average: 0.5,
-                high: 62.5,
+                high: 1,
             },
             },
         ],
