@@ -6,7 +6,6 @@
   "snapshot_provider": "",
   "sdk_version": "0.46.11",
   "coin_type": "459",
-  "alternativeBIP44s": "118",
   "min_tx_fee": "0000000000000000",
   "addr_prefix": "fury",
   "logo": "/logos/fanfury.png",
