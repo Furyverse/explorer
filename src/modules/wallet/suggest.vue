@@ -119,9 +119,9 @@ async function initSnap() {
             coinDecimals: token.denom_units.find(x => x.denom === token.display)?.exponent || 6,
             coinGeckoId: token.coingecko_id,
             gasPriceStep: {
-                low: 0.0625,
-                average: 0.5,
-                high: 62.5,
+                low: 0.01,
+                average: 0.25,
+                high: 0.3,
             },
             },
         ],
