@@ -137,12 +137,10 @@ onMounted(() => {
       });
     });
 
-    pageload(1)
+    // Disable delegations due to its bad performance
+    // Comment out the following code if you want to enable it
+    // pageload(1)
 
-    // blockchain.rpc.getDistributionValidatorSlashes(validator).then(res => {
-    //   // delegations.value = res
-    //   console.log('slashs:', res)
-    // }) 
   }
 });
 let showCopyToast = ref(0);
@@ -487,7 +485,8 @@ function pageload(p: number) {
         </div>
       </div>
     </div>
-    <div class="mt-5 bg-base-100 shadow rounded p-4">
+
+    <div v-if="delegations.delegation_responses" class="mt-5 bg-base-100 shadow rounded p-4 ">
       <div class="text-lg mb-4 font-semibold">{{ $t('account.delegations') }}
         <span class="float-right"> {{ delegations.delegation_responses?.length || 0 }} / {{ delegations.pagination?.total || 0 }} </span>
       </div>
