@@ -55,11 +55,7 @@ async function initParamsForKeplr() {
         bip44: {
             coinType: Number(chain.coinType),
         },
-        // alternativeBIP44s: [
-        //     {
-        //     coinType: Number(118),
-        //     }
-        // ],
+        coinType: Number(chain.coinType),
         bech32Config: {
             bech32PrefixAccAddr: chain.bech32Prefix,
             bech32PrefixAccPub: `${chain.bech32Prefix}pub`,
@@ -122,8 +118,8 @@ async function initSnap() {
             coinGeckoId: token.coingecko_id,
             gasPriceStep: {
                 low: 0.01,
-                average: 0.25,
-                high: 0.3,
+                average: 0.025,
+                high: 0.03,
             },
             },
         ],
