@@ -1,56 +1,28 @@
 {
-  "rpc": "https://gridiron.furya.io",
-  "rest": "https://api-mainnet.furya.io",
+  "chain_name": "highbury",
   "chainId": "highbury_710-1",
-  "chainName": "Highbury",
-  "chainSymbolImageUrl": "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/highbury_710/chain.png",
-  "stakeCurrency": {
-    "coinDenom": "FURY",
-    "coinMinimalDenom": "ufury",
-    "coinDecimals": 6,
-    "coinGeckoId": "fury",
-    "coinImageUrl": "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/highbury_710/ufury.png"
-  },
-  "walletUrl": "https://wallet.keplr.app/chains/highbury",
-  "walletUrlForStaking": "https://wallet.keplr.app/chains/highbury",
+  "api": ["https://api-mainnet.furya.io/", "https://api.furya.io/"],
+  "rpc": ["https://gridiron.furya.io/", "https://rpc.furya.io/"],
+  "snapshot_provider": "",
+  "sdk_version": "0.46.11",
   "bip44": {
-    "coinType": 459
-  },
-  "alternativeBIP44s": [
-    {
-      "coinType": 118
-    }
-  ],
-  "bech32Config": {
-    "bech32PrefixAccAddr": "fury",
-    "bech32PrefixAccPub": "furypub",
-    "bech32PrefixValAddr": "furyvaloper",
-    "bech32PrefixValPub": "furyvaloperpub",
-    "bech32PrefixConsAddr": "furyvalcons",
-    "bech32PrefixConsPub": "furyvalconspub"
-  },
-  "currencies": [
-    {
-      "coinDenom": "FURY",
-      "coinMinimalDenom": "ufury",
-      "coinDecimals": 6,
-      "coinGeckoId": "fury",
-      "coinImageUrl": "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/highbury_710/ufury.png"
-    }
-  ],
-  "feeCurrencies": [
-    {
-      "coinDenom": "FURY",
-      "coinMinimalDenom": "ufury",
-      "coinDecimals": 6,
-      "coinGeckoId": "fury",
-      "coinImageUrl": "https://raw.githubusercontent.com/chainapsis/keplr-chain-registry/main/images/highbury_710/ufury.png",
-      "gasPriceStep": {
-        "low": 0.05,
-        "average": 0.1,
-        "high": 0.25
+      "coinType": 459
+    },
+    "alternativeBIP44s": [
+      {
+        "coinType": 118
       }
-    }
-  ],
-  "features": ["authz-msg-revoke-fixed"]
+    ],
+  "min_tx_fee": "0000000000000000",
+  "addr_prefix": "fury",
+  "logo": "/logos/fanfury.png",
+  "theme_color": "#9fa32c",
+  "keplr_features": ["ibc-transfer", "ibc-go", "eth-address-gen", "eth-key-sign"],
+  "assets": [{
+      "base": "ufury",
+      "symbol": "fury",
+      "exponent": "6",
+      "coingecko_id": "fanfury",
+      "logo": "/logos/fanfury.png"
+  }]
 }
