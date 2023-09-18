@@ -5,19 +5,12 @@
   "rpc": ["https://gridiron.furya.io/", "https://rpc.furya.io/"],
   "snapshot_provider": "",
   "sdk_version": "0.46.11",
-  "bip44": {
-      "coinType": 459
-    },
-    "alternativeBIP44s": [
-      {
-        "coinType": 118
-      }
-    ],
+  "coin_type": "459",
   "min_tx_fee": "0000000000000000",
   "addr_prefix": "fury",
   "logo": "/logos/fanfury.png",
   "theme_color": "#9fa32c",
-  "keplr_features": ["ibc-transfer", "ibc-go", "eth-address-gen", "eth-key-sign"],
+  "keplr_features": ["ibc-transfer", "ibc-go", "eth-address-gen", "eth-key-sign", "authz-msg-revoke-fixed"],
   "assets": [{
       "base": "ufury",
       "symbol": "fury",
