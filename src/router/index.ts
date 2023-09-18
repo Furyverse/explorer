@@ -6,7 +6,7 @@ import { setupLayouts } from "virtual:generated-layouts";
 import routes from "~pages";
 
 const router = createRouter({
-  history: createWebHistory("chains"),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",

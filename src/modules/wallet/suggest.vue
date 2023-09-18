@@ -57,7 +57,7 @@ async function initParamsForKeplr() {
         },
         alternativeBIP44s: [
             {
-            coinType: Number(118),
+            coinType: Number(459),
             }
         ],
         bech32Config: {
