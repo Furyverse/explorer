@@ -48,15 +48,14 @@ async function initParamsForKeplr() {
     }
     const coinDecimals = chain.assets[0].denom_units.find(x => x.denom === chain.assets[0].symbol.toLowerCase())?.exponent || 6
     conf.value = JSON.stringify({
-        chainId: "highbury_710-1",
-        chainName: "Highbury",
-        rpc: "https://gridiron.furya.io",
-        rest: "https://api-mainnet.furya.io",
+        chainId: chainid,
+        chainName: chain.chainName,
+        rpc: chain.endpoints?.rpc?.at(0)?.address,
+        rest: chain.endpoints?.rest?.at(0)?.address,
         bip44: {
-            coinType: Number(459),
-            alternativeBIP44s: Number(118),
+            coinType: Number(chain.coinType),
         },
-        // coinType: Number(chain.coinType),
+        coinType: Number(chain.coinType),
         bech32Config: {
             bech32PrefixAccAddr: chain.bech32Prefix,
             bech32PrefixAccPub: `${chain.bech32Prefix}pub`,
@@ -67,7 +66,7 @@ async function initParamsForKeplr() {
         },
         currencies: [
             {
-                coinDenom: "FURY",
+                coinDenom: chain.assets[0].symbol,
                 coinMinimalDenom: chain.assets[0].base,
                 coinDecimals,
                 coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
@@ -75,7 +74,7 @@ async function initParamsForKeplr() {
         ],
         feeCurrencies: [
             {
-                coinDenom: "FURY",
+                coinDenom: chain.assets[0].symbol,
                 coinMinimalDenom: chain.assets[0].base,
                 coinDecimals,
                 coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
@@ -84,7 +83,7 @@ async function initParamsForKeplr() {
         ],
         gasPriceStep,
         stakeCurrency: {
-            coinDenom: "FURY",
+            coinDenom: chain.assets[0].symbol,
             coinMinimalDenom: chain.assets[0].base,
             coinDecimals,
             coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
@@ -104,13 +103,12 @@ async function initSnap() {
 
     conf.value = JSON.stringify({
         chainId,
-        chainName: "Highbury",
+        chainName: chain.chainName,
         bech32Config: {
             bech32PrefixAccAddr: chain.bech32Prefix,
         },
         bip44: {
-            coinType: Number(459),
-            alternativeBIP44s: Number(118),
+            coinType: Number(chain.coinType),
         },
         feeCurrencies: [
             {
@@ -121,7 +119,7 @@ async function initSnap() {
             gasPriceStep: {
                 low: 0.0625,
                 average: 0.5,
-                high: 1,
+                high: 62.5,
             },
             },
         ],

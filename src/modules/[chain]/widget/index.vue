@@ -13,7 +13,7 @@ const endpoint = ref(chainStore.current?.endpoints?.rest?.at(0)?.address)
 const chainId = computed(() => baseStore.latest?.block?.header?.chain_id || "")
 const chainName = computed(() => chainStore?.current?.prettyName || "")
 const hdPath = computed(() => {
-    return `m/44'/${ chainStore.current?.coinType }/0'/0/0`
+    return `m/44'/459/0'/0/0`
 })
 </script>
 <template>

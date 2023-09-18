@@ -48,7 +48,7 @@ export const useBlockchain = defineStore('blockchain', {
     },
     defaultHDPath(): string {
       const cointype = this.current?.coinType || '459';
-      return `m/44'/${cointype}/0'/0/0`;
+      return `m/44'/459/0'/0/0`;
     },
     dashboard() {
       return useDashboard();

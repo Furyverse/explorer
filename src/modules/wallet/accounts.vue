@@ -153,7 +153,7 @@ const sourceOptions = computed(() => {
     if (chain) {
       keys.push({
         cosmosAddress: sourceAddress.value,
-        hdPath: `m/44/${chain.coinType}/0'/0/0`,
+        hdPath: `m/44/$459/0'/0/0`,
       });
     }
   }
