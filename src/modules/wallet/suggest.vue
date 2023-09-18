@@ -56,7 +56,7 @@ async function initParamsForKeplr() {
             coinType: Number(chain.coinType),
         },
         alternativeBIP44s: {
-            coinType: Number(118),
+            coinType: "118",
         },
         bech32Config: {
             bech32PrefixAccAddr: chain.bech32Prefix,
