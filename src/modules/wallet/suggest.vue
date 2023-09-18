@@ -56,7 +56,7 @@ async function initParamsForKeplr() {
             coinType: Number(chain.coinType),
             alternativeBIP44s: Number(118),
         },
-        coinType: Number(chain.coinType),
+        // coinType: Number(chain.coinType),
         bech32Config: {
             bech32PrefixAccAddr: chain.bech32Prefix,
             bech32PrefixAccPub: `${chain.bech32Prefix}pub`,
@@ -110,6 +110,7 @@ async function initSnap() {
         },
         bip44: {
             coinType: Number(chain.coinType),
+            alternativeBIP44s: Number(118),
         },
         feeCurrencies: [
             {
