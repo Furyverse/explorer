@@ -2,7 +2,7 @@
   "chain_name": "Highbury",
   "chainId": "highbury_710-1",
   "api": ["https://api-mainnet.furya.io/", "https://api.furya.io/"],
-  "rpc": ["https://gridiron.furya.io/", "https://rpc.furya.io/"],
+  "rpc": ["https://highbury.furya.io/", "https://rest.furya.io/"],
   "snapshot_provider": "",
   "sdk_version": "0.46.11",
   "coin_type": "459",
