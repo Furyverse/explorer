@@ -11,7 +11,7 @@
   "addr_prefix": "fury",
   "logo": "/logos/fanfury.png",
   "theme_color": "#9fa32c",
-  "keplr_features": ["ibc-transfer", "ibc-go", "eth-address-gen", "eth-key-sign", "authz-msg-revoke-fixed"],
+  "keplr_features": ["authz-msg-revoke-fixed"],
   "assets": [{
       "base": "ufury",
       "symbol": "FURY",
