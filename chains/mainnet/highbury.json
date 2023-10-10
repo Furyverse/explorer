@@ -3,7 +3,6 @@
   "chainId": "highbury_710-1",
   "api": ["https://api-mainnet.furya.io/", "https://api.furya.io/"],
   "rpc": ["https://gridiron.furya.io/", "https://rpc.furya.io/"],
-  "snapshot_provider": "",
   "sdk_version": "0.46.11",
   "coin_type": "459",
   "alternativeBIP44s": "118",
