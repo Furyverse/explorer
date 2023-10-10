@@ -3,6 +3,7 @@
   "chainId": "highbury_710-1",
   "api": ["https://api-mainnet.furya.io/", "https://api.furya.io/"],
   "rpc": ["https://gridiron.furya.io/", "https://rpc.furya.io/"],
+  "snapshot_provider": "",
   "sdk_version": "0.46.11",
   "coin_type": "459",
   "alternativeBIP44s": "118",
@@ -10,7 +11,7 @@
   "addr_prefix": "fury",
   "logo": "/logos/fanfury.png",
   "theme_color": "#9fa32c",
-  "keplr_features": ["ibc-transfer", "ibc-go", "eth-address-gen", "eth-key-sign","authz-msg-revoke-fixed"],
+  "keplr_features": ["ibc-transfer", "ibc-go", "eth-address-gen", "eth-key-sign", "authz-msg-revoke-fixed"],
   "assets": [{
       "base": "ufury",
       "symbol": "FURY",
